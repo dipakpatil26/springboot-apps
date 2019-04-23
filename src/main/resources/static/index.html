@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Public API Filter and Search Example</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css"
+			href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css"
+			href="css/table.css" />	
+		<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/api.js"></script>
+	</head>
+	<body>
+		<br><br>
+		<div class="container" align="center"  style="min-height: 30px">
+			<div id="filter_field">
+				<label>Enter Job Title To Search</label> 
+				<input type="text" id="filter-text" width="10" /> 
+				<input id="search-button" type="submit" value="Search" /> 
+				<label>Sort Searched Data Using</label> 
+				<select id="selected_field">
+					<option value="uuid" selected="selected">UUID</option>
+					<option value="suggestion">SUGGESTION</option>
+					<option value="normalized_job_title">JOB TITLE</option>
+					<option value="parent_uuid">PARENT UUID</option>
+				</select>
+			</div>
+		</div>
+		<br><br>
+		<!--  -->
+		<div id="num_results" align="center" style="color:navy"></div>
+		<div id="error_result" align="center" style="color:red;"></div>
+		
+		<div class="container" style="min-height: 500px">
+			<div id="data-table">
+				<p id="showData"></p>
+			</div>
+			
+		</div>
+	</body>
+</html>
